@@ -27,6 +27,8 @@ $(call inherit-product, vendor/arrow/config/common.mk)
 # Boot animation
 TARGET_BOOT_ANIMATION_RES := 1080
 
+DEVICE_MAINTAINER := lamjiidii1
+
 # Device identifier
 PRODUCT_NAME := arrow_cepheus
 PRODUCT_DEVICE := cepheus
@@ -36,3 +38,5 @@ PRODUCT_MANUFACTURER := Xiaomi
 
 # Include firmware
 $(call inherit-product, vendor/xiaomi/firmware/cepheus/firmware.mk)
+
+PRODUCT_GMS_CLIENTID_BASE := android-xiaomi

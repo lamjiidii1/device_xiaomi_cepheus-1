@@ -133,6 +133,9 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     prebuilts/vndk/v29/arm64/arch-arm64-armv8-a/shared/vndk-sp/libc++.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libc++.so
 
+PRODUCT_PACKAGES += \
+    GCamGOPrebuilt
+
 # Device-specific settings
 PRODUCT_PACKAGES += \
     XiaomiParts
@@ -180,7 +183,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PROPERTY_OVERRIDES += ro.incremental.enable=1
 
 # Enable blurs, hidden under dev option
-PRODUCT_PRODUCT_PROPERTIES += \
+|PRODUCT_PRODUCT_PROPERTIES += \
     ro.surface_flinger.supports_background_blur=1 \
     persist.sys.sf.disable_blurs=1 \
     ro.sf.blurs_are_expensive=1
@@ -232,14 +235,6 @@ PRODUCT_COPY_FILES += \
 # Insmod files
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/init.insmod.cfg:$(TARGET_COPY_OUT_VENDOR)/etc/init.insmod.cfg
-
-# IFAA manager
-PRODUCT_PACKAGES += \
-    IFAAService \
-    org.ifaa.android.manager
-
-PRODUCT_BOOT_JARS += \
-    org.ifaa.android.manager
 
 # Init scripts
 PRODUCT_COPY_FILES += \
